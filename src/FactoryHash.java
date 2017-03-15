@@ -15,13 +15,13 @@ public class FactoryHash<E> {
 	
 	public Set getSet(String theSet){
 		if (theSet.equals("HashSet")){
-			return new HashSet<String>();
+			return new HashSet<Conjunto>();
 		}
 		if (theSet.equals("TreeSet")){
-			return new TreeSet<String>();
+			return new TreeSet<Conjunto>();
 		}
 		if (theSet.equals("LinkedHashSet")){
-			return new LinkedHashSet<String>();
+			return new LinkedHashSet<Conjunto>();
 		}
 		else{
 			return null;

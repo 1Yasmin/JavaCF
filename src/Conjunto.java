@@ -12,6 +12,9 @@ public class Conjunto<K, V, I> {
 	protected V value;
 	protected I id;
 	
+	public Conjunto(){
+		
+	}
 	   /**
      * Constructs a pair from a key and value.
      *
@@ -108,7 +111,7 @@ public class Conjunto<K, V, I> {
     public String toString()
     {
         StringBuffer s = new StringBuffer();
-        s.append("<Association: "+getKey()+"="+getValue()+">");
+        s.append("Programadores: "+getKey()+"name: "+getValue()+"DPI"+getId());
         return s.toString();
     }
 
