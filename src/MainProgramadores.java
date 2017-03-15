@@ -134,5 +134,27 @@ public class MainProgramadores {
 		conjuntoExp.removeAll(desJava);
 		System.out.println(conjuntoExp.toString());
 
+		if(desAndroid.containsAll(desJava)){
+			System.out.println("\nJava es un subjunto de Android.");
+		}
+		else{
+			System.out.println("\nJava no es un subjunto de Android.");
+		}
+
+		int javaSize = desJava.size();
+		int iOSize = desiOS.size();
+		int androidSize = desAndroid.size();
+		if(javaSize>iOSize && javaSize>androidSize){
+				System.out.print("\nEl conjunto con la mayor cantidad desarrolladores es la de Java.");
+		}
+		else if(iOSize>javaSize && iOSize>androidSize){
+				System.out.print("\nEl conjunto con la mayor cantidad desarrolladores es la de iOS.");
+		}
+		else if(androidSize>javaSize && androidSize>iOSize){
+				System.out.print("\nEl conjunto con la mayor cantidad desarrolladores es la de Android.");
+		}
+		else{
+				System.out.print("No hay conjunto con la mayor cantidad de desarrolladores.");
+		}
 	}
 }
