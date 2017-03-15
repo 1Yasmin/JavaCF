@@ -15,6 +15,8 @@ public class MainProgramadores {
 	protected static Set desJava;
 	protected static Set desAndroid;
 	protected static Set desiOS;
+	protected static Set conjuntoExp;
+
 	/**
 	 * @param args
 	 * Java Collections Framework: Sets
@@ -37,19 +39,19 @@ public class MainProgramadores {
 			 desJava = factory.getSet(tHash);
 			 desAndroid = factory.getSet(tHash);
 			 desiOS = factory.getSet(tHash);
-			 //System.out.println(myHash);
+			 conjuntoExp = factory.getSet(tHash);
 		 }
 		 if(tHash.equals("TreeSet")) {
 			 desJava = factory.getSet(tHash);
 			 desAndroid = factory.getSet(tHash);
 			 desiOS = factory.getSet(tHash);
-			 //System.out.println(myHash);
+			 conjuntoExp = factory.getSet(tHash);
 		 }
 		 if(tHash.equals("LinkedHashSet")) {
 			 desJava = factory.getSet(tHash);
 			 desAndroid = factory.getSet(tHash);
 			 desiOS = factory.getSet(tHash);
-			 //System.out.println(myHash);
+			 conjuntoExp = factory.getSet(tHash);
 		 }
 		 System.out.println("¿Cuantos programadores ingresara?");
 		 int cantProgra = Integer.parseInt(sc.nextLine());
@@ -98,20 +100,39 @@ public class MainProgramadores {
 			cantIngresada++;
 		 }
 
-
-
-
-
 		//Operaciones Requeridas
 		System.out.println("\nEl conjunto de los desarrolladores es: ");
 		System.out.println("\nProgramadores de Java: "+desJava);
 		System.out.println("\nProgramadores de Android: "+desAndroid);
 		System.out.println("\nProgramadores de iOS: "+desiOS);
 
+		System.out.println("\nProgramadores con experiencia Java, Android y iOS:");
+		conjuntoExp.addAll(desJava);
+		conjuntoExp.retainAll(desAndroid);
+		conjuntoExp.retainAll(desiOS);
+		System.out.println(conjuntoExp.toString());
 
+		System.out.println("\nProgramadores con experiencia Java y no Android:");
+		conjuntoExp.clear();
+		conjuntoExp.addAll(desJava);
+		conjuntoExp.addAll(desAndroid);
+		conjuntoExp.removeAll(desAndroid);
+		System.out.println(conjuntoExp.toString());
 
+		System.out.println("\nProgramadores con experiencia Android y iOS, pero no Java:");
+		conjuntoExp.containsAll(desiOS);
+		conjuntoExp.clear();
+		conjuntoExp.addAll(desAndroid);
+		conjuntoExp.retainAll(desiOS);
+		conjuntoExp.removeAll(desJava);
+		System.out.println(conjuntoExp.toString());
 
+		System.out.println("\nProgramadores con experiencia Android o iOS, pero no Java:");
+		conjuntoExp.clear();
+		conjuntoExp.addAll(desAndroid);
+		conjuntoExp.addAll(desiOS);
+		conjuntoExp.removeAll(desJava);
+		System.out.println(conjuntoExp.toString());
 
 	}
-
 }
