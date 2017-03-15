@@ -1,19 +1,15 @@
 /**
- * 
- */
-
-/**
- * @author ychav
- *
+* @author Yasmin Chavez
+* @author Daniel Rodriguez
  */
 public class Conjunto<K, V, I> {
-	
+
 	protected K key;
 	protected V value;
-	protected I id;
-	
+	protected I desarrollador;
+
 	public Conjunto(){
-		
+
 	}
 	   /**
      * Constructs a pair from a key and value.
@@ -23,14 +19,14 @@ public class Conjunto<K, V, I> {
      * @param key A non-null object.
      * @param value A (possibly null) object.
      */
-	 public Conjunto(K key, V value, I id)
+	 public Conjunto(K key, V value, I desarrollador)
 	    {
-	        
+
 	        this.key = key;
 	        this.value = value;
-	        this.id = id;
+	        this.desarrollador = desarrollador;
 	    }
-	 
+
 	  /**
 	     * Standard comparison function.  Comparison based on keys only.
 	     *
@@ -44,7 +40,7 @@ public class Conjunto<K, V, I> {
 	        Conjunto<K, V, I> otherConjunto = (Conjunto<K, V, I>) other;
 	        return getKey().equals(otherConjunto.getKey());
 	    }
-	 
+
 	 /**
      * Standard hashcode function.
      *
@@ -56,7 +52,7 @@ public class Conjunto<K, V, I> {
     {
         return getKey().hashCode();
     }
-    
+
     /**
      * Fetch value from association.  May return null.
      *
@@ -85,9 +81,9 @@ public class Conjunto<K, V, I> {
      * @post returns key from association
      * @return Key of the key-value pair.
      */
-    public I getId()
+    public I getdesarrollador()
     {
-        return id;
+        return desarrollador;
     }
     /**
      * Sets the value of the key-value pair.
@@ -111,7 +107,7 @@ public class Conjunto<K, V, I> {
     public String toString()
     {
         StringBuffer s = new StringBuffer();
-        s.append("\nProgramadores: \n"+getKey()+" name: "+getValue()+" DPI: "+getId());
+        s.append("\n"+" DPI: "+getKey()+" name: "+getValue());
         return s.toString();
     }
 
