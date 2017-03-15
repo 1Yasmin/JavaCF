@@ -12,7 +12,9 @@ import java.util.TreeSet;
  */
 public class MainProgramadores {
 
-	protected static Set myHash;
+	protected static Set desJava;
+	protected static Set desAndroid;
+	protected static Set desiOS;
 	/**
 	 * @param args
 	 * Java Collections Framework: Sets
@@ -32,16 +34,22 @@ public class MainProgramadores {
 		 System.out.println("Elija el tipo de Hash (HashSet, TreeSet o LinkedHashSet): ");
 		 String tHash = sc.nextLine();
 		 if(tHash.equals("HashSet")) {
-			 myHash = factory.getSet(tHash);
-			 System.out.println(myHash);
+			 desJava = factory.getSet(tHash);
+			 desAndroid = factory.getSet(tHash);
+			 desiOS = factory.getSet(tHash);
+			 //System.out.println(myHash);
 		 }
 		 if(tHash.equals("TreeSet")) {
-			 myHash = factory.getSet(tHash);
-			 System.out.println(myHash);
+			 desJava = factory.getSet(tHash);
+			 desAndroid = factory.getSet(tHash);
+			 desiOS = factory.getSet(tHash);
+			 //System.out.println(myHash);
 		 }
 		 if(tHash.equals("LinkedHashSet")) {
-			 myHash = factory.getSet(tHash);
-			 System.out.println(myHash);
+			 desJava = factory.getSet(tHash);
+			 desAndroid = factory.getSet(tHash);
+			 desiOS = factory.getSet(tHash);
+			 //System.out.println(myHash);
 		 }
 		 System.out.println("¿Cuantos programadores ingresara?");
 		 int cantProgra = Integer.parseInt(sc.nextLine());
@@ -60,8 +68,8 @@ public class MainProgramadores {
 			System.out.println("Desarrolla en Java (si/no)");
 			String respJava = sc.nextLine();
 			if(respJava.equals("si")){
-				Conjunto java = new Conjunto("Java", name, dpi);
-				myHash.add(java);
+				Conjunto java = new Conjunto(dpi, name, "Java");
+				desJava.add(java);
 			}
 			else{
 				boolean desarrollaJava = false;
@@ -70,8 +78,8 @@ public class MainProgramadores {
 			System.out.println("Desarrolla en Android (si/no)");
 			String respAndroid = sc.nextLine();
 			if(respAndroid.equals("si")){
-				Conjunto android = new Conjunto("Android", name, dpi);
-				myHash.add(android);
+				Conjunto android = new Conjunto(dpi, name, "Android");
+				desAndroid.add(android);
 			}
 			else{
 				boolean desarrollaAndroid = false;
@@ -80,8 +88,8 @@ public class MainProgramadores {
 			System.out.println("Desarrolla en iOS (si/no)");
 			String respIos = sc.nextLine();
 			if(respIos.equals("si")){
-				Conjunto iOS = new Conjunto("iOS", name, dpi);
-				myHash.add(iOS);
+				Conjunto iOS = new Conjunto(dpi, name, "iOS");
+				desiOS.add(iOS);
 			}
 			else{
 				boolean desarrollaIos = false;
@@ -90,13 +98,16 @@ public class MainProgramadores {
 			cantIngresada++;
 		 }
 
-		 
+
 
 
 
 		//Operaciones Requeridas
 		System.out.println("\nEl conjunto de los desarrolladores es: ");
-		System.out.println(myHash);
+		System.out.println("\nProgramadores de Java: "+desJava);
+		System.out.println("\nProgramadores de Android: "+desAndroid);
+		System.out.println("\nProgramadores de iOS: "+desiOS);
+
 
 
 
