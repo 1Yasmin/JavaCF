@@ -111,7 +111,7 @@ public class Conjunto<K, V, I> {
     public String toString()
     {
         StringBuffer s = new StringBuffer();
-        s.append("Programadores: "+getKey()+"name: "+getValue()+"DPI"+getId());
+        s.append("\nProgramadores: \n"+getKey()+" name: "+getValue()+" DPI: "+getId());
         return s.toString();
     }
 
