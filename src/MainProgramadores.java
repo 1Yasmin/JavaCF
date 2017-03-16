@@ -4,7 +4,7 @@ Desarrolladores de Java, Android y iOS
 
 Autores:
 Daniel Rodriguez # 15796
-Yasmin Chavez #
+Yasmin Chavez # 16101
 
 Clase MAIN del Programa donde se organizan desarrolladores de Java, Android y iOS dependiendo
 de su experiencia. Ademas se selecciona el tipo de ordenamiento a travez
