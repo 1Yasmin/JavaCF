@@ -1,3 +1,15 @@
+/*
+HOJA DE TRABAJO # 6
+Desarrolladores de Java, Android y iOS
+
+Autores:
+Daniel Rodriguez # 15796
+Yasmin Chavez #
+
+Clase MAIN del Programa donde se organizan desarrolladores de Java, Android y iOS dependiendo
+de su experiencia. Ademas se selecciona el tipo de ordenamiento a travez
+de las diferentes implementaciones de SET (HashSet, TreeSet, LinkedHashSet)
+*/
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.HashSet;
@@ -6,12 +18,9 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
-/**
- * @author Yasmin Chavez
- * @author Daniel Rodriguez
- */
 public class MainProgramadores {
 
+	//Atributos para los diferentes Sets de los Conjuntos
 	protected static Set desJava;
 	protected static Set desAndroid;
 	protected static Set desiOS;
@@ -31,7 +40,7 @@ public class MainProgramadores {
 		Conjunto<String, String, String>  miConjunto = new Conjunto<String, String, String>();
 
 		Scanner sc = new Scanner(System.in);
-		//Instanciar objetos a utilizar
+		//Permite Instaciar el tipo de implementacion seleccionada comunicandose con la clase FactoryHash.
 		 String cadena;
 		 System.out.println("Elija el tipo de Hash (HashSet, TreeSet o LinkedHashSet): ");
 		 String tHash = sc.nextLine();
@@ -53,12 +62,12 @@ public class MainProgramadores {
 			 desiOS = factory.getSet(tHash);
 			 conjuntoExp = factory.getSet(tHash);
 		 }
-		 System.out.println("¿Cuantos programadores ingresara?");
+		 System.out.println("Â¿Cuantos programadores ingresara?");
 		 int cantProgra = Integer.parseInt(sc.nextLine());
 
 		 int cantIngresada = 0;
 
-
+		//Obtiene la informacion de los desarrolladores y los almacena en los conjuntos.
 		while(cantIngresada != cantProgra){
 
 			System.out.println("Nombre del programador");
@@ -78,7 +87,7 @@ public class MainProgramadores {
 					Conjunto java = new Conjunto(dpi, name, "Java");
 					desJava.add(java);
 				}
-				
+
 			}
 			System.out.println("Desarrolla en Android (si/no)");
 			String respAndroid = sc.nextLine();
@@ -108,7 +117,7 @@ public class MainProgramadores {
 			cantIngresada++;
 		 }
 
-		//Operaciones Requeridas
+		//Presenta la informacion de los diferentes conjuntos con la informacion organizada dependiendo de lo requerido.
 		System.out.println("\nEl conjunto de los desarrolladores es: ");
 		System.out.println("\nProgramadores de Java: "+desJava);
 		System.out.println("\nProgramadores de Android: "+desAndroid);
