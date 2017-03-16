@@ -4,7 +4,7 @@ Desarrolladores de Java, Android y iOS
 
 Autores:
 Daniel Rodriguez # 15796
-Yasmin Chavez #
+Yasmin Chavez # 16101
 
 Clase Conjunto donde se almacena la informacion de los desarrolladores.
 */
