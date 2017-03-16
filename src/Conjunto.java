@@ -1,7 +1,13 @@
-/**
-* @author Yasmin Chavez
-* @author Daniel Rodriguez
- */
+/*
+HOJA DE TRABAJO # 6
+Desarrolladores de Java, Android y iOS
+
+Autores:
+Daniel Rodriguez # 15796
+Yasmin Chavez #
+
+Clase Conjunto donde se almacena la informacion de los desarrolladores.
+*/
 public class Conjunto<K, V, I> {
 
 	protected K key;
@@ -59,7 +65,7 @@ public class Conjunto<K, V, I> {
      * @post returns value from association
      * @return The value field of the association.
      */
-    public V getValue()
+    public V getValue() //Almacena el Nombre del Desarrollador
     {
         return value;
     }
@@ -70,7 +76,7 @@ public class Conjunto<K, V, I> {
      * @post returns key from association
      * @return Key of the key-value pair.
      */
-    public K getKey()
+    public K getKey() //Almacena el DPI del Desarrollador
     {
         return key;
     }
@@ -81,7 +87,7 @@ public class Conjunto<K, V, I> {
      * @post returns key from association
      * @return Key of the key-value pair.
      */
-    public I getdesarrollador()
+    public I getdesarrollador() //Devuelve el desarrollador.
     {
         return desarrollador;
     }
@@ -104,7 +110,7 @@ public class Conjunto<K, V, I> {
      * @post returns string representation
      * @return String representing key-value pair.
      */
-    public String toString()
+    public String toString() //Imprime la informacion del Desarrollador
     {
         StringBuffer s = new StringBuffer();
         s.append("\n"+" DPI: "+getKey()+" name: "+getValue());
@@ -112,3 +118,4 @@ public class Conjunto<K, V, I> {
     }
 
 }
+
