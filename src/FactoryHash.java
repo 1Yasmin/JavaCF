@@ -4,7 +4,7 @@ Desarrolladores de Java, Android y iOS
 
 Autores:
 Daniel Rodriguez # 15796
-Yasmin Chavez #
+Yasmin Chavez # 16101
 
 Clase FactoryHash permite seleccionar el tipo de ordenamiento a travez
 de las diferentes implementaciones de SET (HashSet, TreeSet, LinkedHashSet)
